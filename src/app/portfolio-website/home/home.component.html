@@ -1,0 +1,75 @@
+<app-navbar></app-navbar>
+
+<div class="home-container">
+  <div class="main-content animate__animated animate__fadeInUp">
+    <div class="profile-section">
+      <div class="thumb-container">
+        <img
+          src="/assets/malshika.jpg"
+          alt="Profile image"
+          class="thumb-image"
+        />
+      </div>
+      <div class="text-container">
+        <p>Hey there! I go by</p>
+        <h1>Malshika Rajamanthri</h1>
+        <p>
+          and I'm diving into the world of software as an enthusiastic
+          Engineering Undergrad, turning ideas into digital reality.
+        </p>
+        <a href="/assets/cv.pdf" class="download-cv-button" download>Download CV</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="projects-section" *ngIf="showProjects">
+    <div 
+    id="skills-section"
+    class="projects-header animate__animated animate__fadeInUp">
+      <p class="projects-title">Projects</p>
+    </div>
+
+    <div class="uiux-projects">
+      <p class="projects-category">UI/UX Projects</p>
+      <div class="card-container">
+        <div class="project-card animate__animated animate__fadeInUp" *ngFor="let project of uiuxProjects">
+          <mat-card class="example-card" >
+            <mat-card-header class="row align-items-center">
+              <h4 mat-card-title>{{ project.name }}</h4>
+            </mat-card-header>
+            <img mat-card-image [src]="project.image" alt="{{ project.name }} image" class="project-image">
+            <mat-card-content>
+              <p>{{ project.description }}</p>
+            </mat-card-content>
+            <mat-card-actions>
+              <a mat-button [href]="project.behanceUrl" target="_blank" class="github-link">View on Behance</a>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+
+    <div class="web-projects">
+      <p class="projects-category">Web Projects</p>
+      <div class="card-container">
+        <div class="project-card animate__animated animate__fadeInUp" *ngFor="let project of webProjects">
+          <mat-card class="example-card">
+            <mat-card-header class="row align-items-center">
+              <h4 mat-card-title>{{ project.name }}</h4>
+            </mat-card-header>
+            <img mat-card-image [src]="project.image" alt="{{ project.name }} image" class="project-image">
+            <mat-card-content>
+              <p>{{ project.description }}</p>
+            </mat-card-content>
+            <mat-card-actions>
+              <a mat-button [href]="project.githubUrl" target="_blank" class="github-link">View on site </a>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<app-footer></app-footer>
