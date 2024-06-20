@@ -18,7 +18,8 @@ export class FooterComponent {
   }
 
   onHome(){
-    window.scrollTo({top:0,behavior:'smooth'})
+    // window.scrollTo({top:0,behavior:'smooth'})
+    this.router.navigate(['./portfolio-website/home']);
   }
   onAbout(){
     this.router.navigate(['./portfolio-website/about'])

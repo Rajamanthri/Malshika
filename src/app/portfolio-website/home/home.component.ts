@@ -41,7 +41,7 @@ export class HomeComponent {
       name: 'My Portfolio',
       description: 'Explore my Angular-powered portfolio showcasing various projects, highlighting my passion.',
       image: '/assets/portfolio-2.png',
-      githubUrl: 'https://github.com/Rajamanthri/Portfolio-1.git'
+      githubUrl: 'https://github.com/Rajamanthri/Malshika.git'
     },
     {
       name: 'Fashion',
